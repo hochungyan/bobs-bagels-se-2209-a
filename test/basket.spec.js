@@ -97,7 +97,23 @@ result = undefined;
 //Arrange
 //basket= ['item1','item2','item3'];
 //basket.basketItems= ['item1','item2','item3'];
-//expected = 3;
-//ctual =basket.length;
-//esult = assertEquals(actual,expected);
+//Expected = 3;
+//Actual =basket.length;
+//Result = assertEquals(actual,expected);
 //console.log(`Is the Bag Full: ${result}`);
+
+
+//Test 4 Create a larger basket when needed
+//console.log(`============================`);
+//console.log(`Test 4: Create a Larger Basket`)
+
+//Arrange
+basket = new Basket[];
+actual = basket.basketItems.length;
+
+
+//Act
+
+//Assert
+console.log(`Do we need a larger basket: ${result}`)
+//Expected
