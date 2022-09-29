@@ -68,18 +68,16 @@ console.log(`============================`);
 console.log(`Test 3: Check Bag Capacity`)
 
 //Arrange
-basket = new Basket(3);
+basket = new Basket(2);
 item1 = { id: `item1` };
 item2 ={id:`item2`};
 let item3 = {id:`item3`};
-expected = 3;
+expected = "Sorry, this basket is full";
 basket.add(item1);
 basket.add(item2);
-basket.add(item3);
-actual =basket.basketItems.length;
+actual =basket.add(item3);
 result = assertEquals(actual,expected);
-console.log(`Is the Bag Full: ${result}`);
-
+console.log(`${expected}: ${result} `);
 // Clean up
 basket = null;
 item = undefined;
