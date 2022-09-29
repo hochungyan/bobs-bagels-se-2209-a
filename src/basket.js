@@ -5,7 +5,9 @@ class Basket {
     add = item => {
         this.basketItems.push(item);
     };
-
+    remove = item => {
+        this.basketItems.pop(item);
+    };
 
 
 }
