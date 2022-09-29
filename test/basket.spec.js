@@ -101,17 +101,21 @@ result = undefined;
 //console.log(`Is the Bag Full: ${result}`);
 
 
-//Test 4 Create a larger basket when needed
-//console.log(`============================`);
-//console.log(`Test 4: Create a Larger Basket`)
+// Test 4 Create a larger basket when needed
+console.log(`============================`);
+console.log(`Test 4: Create a Larger Basket`)
 
 //Arrange
-basket = new Basket[];
-actual = basket.basketItems.length;
-
+basket = new Basket();
+expected = 3;
 
 //Act
+basket.setCapacity(3);
+actual = basket.capacity;
 
 //Assert
+result = assertEquals(expected, actual);
 console.log(`Do we need a larger basket: ${result}`)
+
+
 //Expected

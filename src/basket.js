@@ -1,7 +1,9 @@
 class Basket {
+    capacity; 
+    basketItems;
 
-    constructor(capacity) {
-        this.capacity = capacity;
+    constructor() {
+        this.capacity = 2;
         this.basketItems = [];
     }
 
@@ -23,7 +25,12 @@ class Basket {
     
     isFull() {
         return this.basketItems.length >= this.capacity;
-      }
+    };
+
+    setCapacity(newCapacity) {
+        this.capacity = newCapacity;
+    
+    }
 
 }
 
