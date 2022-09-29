@@ -80,3 +80,24 @@ actual =basket.basketItems.length;
 result = assertEquals(actual,expected);
 console.log(`Is the Bag Full: ${result}`);
 
+// Clean up
+basket = null;
+item = undefined;
+item1 = undefined;
+item2 = undefined;
+expected = undefined;
+actual = undefined;
+result = undefined;
+
+
+//Test 3 Check when the basket is full or not (Another Way to do Test 3)
+//console.log(`============================`);
+//console.log(`Test 3: Check Bag Capacity`)
+
+//Arrange
+//basket= ['item1','item2','item3'];
+//basket.basketItems= ['item1','item2','item3'];
+//expected = 3;
+//ctual =basket.length;
+//esult = assertEquals(actual,expected);
+//console.log(`Is the Bag Full: ${result}`);
