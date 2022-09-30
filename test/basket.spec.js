@@ -119,3 +119,26 @@ console.log(`Do we need a larger basket: ${result}`)
 
 
 //Expected
+
+//CleanUp
+// Clean up
+basket = null;
+item1 = undefined;
+item2 = undefined;
+expected = undefined;
+actual = undefined;
+result = undefined;
+
+//Test 5a: remove an item that doesn't exist in my basket and want to know if I try to add an item with the same ID already in my basket.
+//Setup or Arrange
+console.log(`============================`);
+console.log(`Test 5A: Remove an item that does not exist in my basket`)
+basket = new Basket();
+item1 = { id: `item1` };
+item2 ={id:`item2`};
+expected = 'Sorry, item not in basket';
+//Act
+basket.add(item1);
+actual = basket.remove(item2);
+result =assertEquals(actual, expected);
+console.log(`Are you removing an item that does not exist in the basket: ${result}`);

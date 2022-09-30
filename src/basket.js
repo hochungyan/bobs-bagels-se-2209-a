@@ -20,7 +20,14 @@ class Basket {
 
 
     remove = item => {
+        if(this.basketItems.includes(item))
+        {
         this.basketItems.pop(item);
+        }
+        else
+        {
+            return 'Sorry, item not in basket';
+        }
     };
     
     isFull() {
@@ -31,6 +38,7 @@ class Basket {
         this.capacity = newCapacity;
     
     }
+
 
 }
 
