@@ -40,7 +40,9 @@ class Basket {
     setCapacity(newCapacity) {
         this.capacity = newCapacity;
     
-    }
+    };
+
+    
 
 
 }
