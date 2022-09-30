@@ -1,5 +1,6 @@
 const { assertEquals } = require('./testing-framework');
 const Basket = require("../src/basket");
+const Item = require("../src/item");
 
 let expected;
 let actual;
@@ -143,12 +144,13 @@ actual = basket.remove(item2);
 result =assertEquals(actual, expected);
 console.log(`Are you removing an item that does not exist in the basket: ${result}`);
 
-
-
-
-
-
-
+//Cleanup
+basket = null;
+item1 = undefined;
+item2 = undefined;
+expected = undefined;
+actual = undefined;
+result = undefined;
 
 
 
@@ -157,16 +159,23 @@ console.log(`Are you removing an item that does not exist in the basket: ${resul
 
 //Test 6: I'd like to see the price of an item before I add it to my basket
 // Arrange 
-const Item = require("../src/item");
 console.log(`============================`);
 console.log(`Test 6: See the price of an item before adding it to basket`);
 
-item1 = { id: '1', price: 3 };
+let item4 = new Item('1', 3);
 
-result = assertEquals(item1.id, '1');
-result2 = assertEquals(item1.price, 3);
+result = assertEquals(item4.id, '1');
+result2 = assertEquals(item4.price, 3);
 console.log(result);
 console.log(result2);
+console.log(item4);
+
+//Cleanup
+item1 = undefined;
+expected = undefined;
+actual = undefined;
+result = undefined;
+result2 = undefined;
 
 
 
