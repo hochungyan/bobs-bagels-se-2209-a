@@ -142,3 +142,31 @@ basket.add(item1);
 actual = basket.remove(item2);
 result =assertEquals(actual, expected);
 console.log(`Are you removing an item that does not exist in the basket: ${result}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Test 6: I'd like to see the price of an item before I add it to my basket
+// Arrange 
+const Item = require("../src/item");
+console.log(`============================`);
+console.log(`Test 6: See the price of an item before adding it to basket`);
+
+item1 = { id: '1', price: 3 };
+
+result = assertEquals(item1.id, '1');
+result2 = assertEquals(item1.price, 3);
+console.log(result);
+console.log(result2);
+
+
+
