@@ -1,4 +1,4 @@
-class Item {
+class item {
   
 
     constructor(id, price) {
@@ -8,4 +8,4 @@ class Item {
     };
 
 }
-module.exports = Item;
+module.exports = item;
