@@ -15,7 +15,7 @@ console.log(`Test 1 - add puts something into the basket`);
 
 // Arrange
 basket = new Basket(); //Setup New Basket
-item1 = new Item(); //Setup Inital item
+item1 = { id: `item1` }; //Setup Inital item
 expected = 1; //Expected value
 
 // Act
@@ -28,7 +28,7 @@ console.log(`Test 1: Something added to basket: ${result}`);
 console.log(`Test 1: Number of Item in the basket: ${actual}`);
 //Clean up
 basket = null;
-item1 = null;
+item = null;
 expected = undefined;
 actual = undefined;
 result = undefined;
@@ -39,7 +39,7 @@ console.log(`Test 2: Remove Item from the basket`)
 
 // Arrange
 basket = new Basket();
-let item2 = new Item();
+let item2 ={id:`item2`};
 basket.add(item1);
 basket.add(item2);
 expected = 1
@@ -57,6 +57,7 @@ console.log(`Test 2: Does the basket contains ${expected} item: ${result}`);
 
 // Clean up
 basket = null;
+item = undefined;
 item1 = undefined;
 item2 = undefined;
 expected = undefined;
@@ -69,15 +70,18 @@ console.log(`Test 3: Check Bag Capacity`)
 
 //Arrange
 basket = new Basket(2);
-let item3 = new Item();
+item1 = { id: `item1` };
+item2 ={id:`item2`};
+let item3 = {id:`item3`};
 expected = "Sorry, this basket is full";
 basket.add(item1);
 basket.add(item2);
 actual =basket.add(item3);
 result = assertEquals(actual,expected);
-console.log(`Error Message: ${expected}: ${result} `);
+console.log(`${expected}: ${result} `);
 // Clean up
 basket = null;
+item = undefined;
 item1 = undefined;
 item2 = undefined;
 expected = undefined;
@@ -112,7 +116,7 @@ actual = basket.capacity;
 
 //Assert
 result = assertEquals(expected, actual);
-console.log(`We can create a larger basket: ${result}`)
+console.log(`Do we need a larger basket: ${result}`)
 
 
 //Expected
@@ -128,12 +132,12 @@ result = undefined;
 
 //Test 5a: remove an item that doesn't exist in my basket and want to know if I try to add an item with the same ID already in my basket.
 //Setup or Arrange
-console.log(`\x1B[29m============================`);
+console.log(`============================`);
 console.log(`Test 5A: Remove an item that does not exist in my basket`)
+basket = new Basket();
+item1 = { id: `item1` };
+item2 ={id:`item2`};
 expected = 'Sorry, item not in basket';
-basket= new Basket();
-item1 = new Item("1",3);
-item2 = new Item("2",5);
 //Act
 basket.add(item1);
 actual = basket.remove(item2);
@@ -158,12 +162,13 @@ result = undefined;
 console.log(`============================`);
 console.log(`Test 6: See the price of an item before adding it to basket`);
 
-let item4 = new Item('4', 3);
+let item4 = new Item('1', 3);
 
-result = assertEquals(item4.id, '4');
+result = assertEquals(item4.id, '1');
 result2 = assertEquals(item4.price, 3);
-//console.log('\x1B[31mhello\x1B[34m world');
-console.log(`Can I see the price ($${item4.price}) of item4 before I add it to the basket: ${result2}`);
+console.log(result);
+console.log(result2);
+console.log(item4);
 
 //Cleanup
 item1 = undefined;
