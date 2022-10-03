@@ -157,12 +157,9 @@ result = undefined;
 // Arrange 
 console.log(`============================`);
 console.log(`Test 6: See the price of an item before adding it to basket`);
-
 let item4 = new Item('4', 3);
-
 result = assertEquals(item4.id, '4');
 result2 = assertEquals(item4.price, 3);
-//console.log('\x1B[31mhello\x1B[34m world');
 console.log(`Can I see the price ($${item4.price}) of item4 before I add it to the basket: ${result2}`);
 
 //Cleanup
